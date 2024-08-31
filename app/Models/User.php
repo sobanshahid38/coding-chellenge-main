@@ -55,6 +55,12 @@ class User extends Authenticatable
     public function connections()
     {
         return $this->belongsToMany(User::class, 'connections', 'user_id', 'connected_user_id')
-            ->wherePivot('status', 'accepted');
+                    ->wherePivot('status', 'accepted')
+                    ->orWhere(function($query) {
+                        $query->where('user_id', auth()->id())
+                              ->where('status', 'accepted');
+                    });
     }
+    
+
 }

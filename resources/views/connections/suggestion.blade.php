@@ -1,0 +1,1 @@
+<x-suggestion :suggestions="$suggestions" />

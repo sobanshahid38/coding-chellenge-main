@@ -83,5 +83,8 @@ function exampleOnSuccessFunction(exampleVariable, response) {
 
   console.log(exampleVariable);
   console.table(response);
+  $('#connections_in_common_skeleton').addClass('d-none')
+
   $('#content').html(response['content']);
+  $('#content').removeClass('d-none')
 }

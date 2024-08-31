@@ -1,0 +1,1 @@
+<x-connection :connections="$connections" />
