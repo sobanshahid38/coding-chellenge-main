@@ -34,6 +34,6 @@
 
 @if($requests->hasMorePages())
 <div class="d-flex justify-content-center mt-2 py-3 {{-- d-none --}}" id="load_more_btn_parent">
-  <button class="btn btn-primary" onclick="" data-next-page="{{ $suggestions->nextPageUrl() }}" id="load_more_btn">Load more</button>
+  <button class="btn btn-primary" onclick="getMoreRequests('{{$mode}}')" data-next-page="{{ $requests->nextPageUrl() }}" id="load_more_btn">Load more</button>
 </div>
 @endif

@@ -16,11 +16,9 @@
 </div>
 
 @if($suggestions->hasMorePages())
-  {{-- <div class="text-center mt-4">
-      <button id="load-more-btn" class="btn btn-secondary" data-next-page="{{ $suggestions->nextPageUrl() }}">Load More</button>
-  </div> --}}
+  
   <div class="d-flex justify-content-center mt-2 py-3 {{-- d-none --}}" id="load_more_btn_parent">
-    <button class="btn btn-primary" onclick="" data-next-page="{{ $suggestions->nextPageUrl() }}" id="load_more_btn">Load more</button>
+    <button class="btn btn-primary"  data-next-page="{{ $suggestions->nextPageUrl() }}" onclick="getMoreSuggestions()" id="load_more_btn">Load more</button>
   </div>
 @else
 @endif

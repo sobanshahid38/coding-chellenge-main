@@ -15,7 +15,7 @@ class RequestsSeeder extends Seeder
 
         // Create connection requests
         foreach ($users as $user) {
-            $otherUsers = User::where('id', '!=', $user->id)->inRandomOrder()->take(3)->get();
+            $otherUsers = User::where('id', '!=', $user->id)->inRandomOrder()->take(20)->get();
             foreach ($otherUsers as $otherUser) {
                 Connection::factory()->create([
                     'user_id' => $user->id,

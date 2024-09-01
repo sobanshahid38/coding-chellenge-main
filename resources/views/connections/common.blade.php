@@ -1,0 +1,1 @@
+<x-connection_in_common :users="$users" />

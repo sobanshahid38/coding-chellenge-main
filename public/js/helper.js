@@ -52,7 +52,9 @@ function ajax(url, method, functionsOnSuccess, form) {
           }
         }
         functionsOnSuccess[j][0].apply(this, functionsOnSuccess[j][1]);
+        
       }
+      updateAllcounts();
     }
   });
 }

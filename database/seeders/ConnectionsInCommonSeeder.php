@@ -15,7 +15,7 @@ class ConnectionsInCommonSeeder extends Seeder
 
         // Create connections
         foreach ($users as $user) {
-            $otherUsers = User::where('id', '!=', $user->id)->inRandomOrder()->take(2)->get();
+            $otherUsers = User::where('id', '!=', $user->id)->inRandomOrder()->take(20)->get();
             foreach ($otherUsers as $otherUser) {
                 Connection::factory()->create([
                     'user_id' => $user->id,
